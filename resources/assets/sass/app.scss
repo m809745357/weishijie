@@ -1,0 +1,384 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+body {
+  font-family: "Noto Sans CJK SC", "Source Han Sans CN", "Microsoft Yahei";
+}
+.navbar-brand {
+  float: left;
+  font-size: 18px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: 50px;
+
+  img {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+.navbar {
+  margin-bottom: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1800px) {
+  .img-top {
+    height: calc(100vh - 50px);
+  }
+}
+
+.jtwh {
+  height: 2.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  strong {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .hr {
+    height: 2px;
+    background-color: #33b16a;
+    width: 72px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  span {
+    font-size: 11px;
+  }
+}
+.jtwh-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.jtwh-media-left {
+  width: 10rem;
+}
+.jtwh-media-body {
+  font-size: 16px;
+  text-indent: 2em;
+  width: 10rem;
+}
+.tips {
+  margin-top: 1.61rem;
+}
+.media-heading {
+  font-size: 21px;
+  font-weight: 300;
+  color: #353535;
+}
+.jtwh-media-body p {
+  font-size: 13px;
+  color: #b7b7b7;
+}
+.fzlc {
+  height: 4.6rem;
+}
+.fzlc-left {
+  display: flex;
+  font-size: 21px;
+  color: #000;
+  width: 3rem;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+.fzlc-media-body {
+  height: 4.6rem;
+  border-left: 1px solid #eeeeee;
+  padding-left: 26px;
+  position: relative;
+  left: -30px;
+  z-index: 1;
+}
+.footer-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  background-image: url('/images/footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-box {
+  width: 8.18rem;
+  height: 5.20rem;
+  background-color: #fefefe;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.footer-box-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 2.42rem;
+  height: 5.20rem;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  p {
+    width: 2rem;
+    text-align: center;
+    font-size: 17px;
+  }
+}
+.footer-box-right {
+
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 5.76rem;
+  height: 5.20rem;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    width: 5rem;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: left;
+    margin: 0 0 0.1rem;
+  }
+}
+footer {
+  height: 1.1666666667rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5f6064;
+  background-color: #000;
+}
+.footer-images {
+  display: flex;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 20px;
+  }
+}
+.new {
+  margin-bottom: 0.95rem;
+}
+.other-tips {
+  margin-bottom: 1.722rem;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.95rem;
+}
+.loading-more {
+  width: 3.74rem;
+  border-radius: 1.1rem;
+  font-size: 18px;
+  border: 1px solid #36b170;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  color: #36b170;
+  text-align: center;
+  font-weight: 300;
+}
+
+/**
+ * teach
+ */
+.thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.img-tips {
+  width: 100%;
+  height: 4.4rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  p {
+    margin: auto 0.3333rem;
+    display: none;
+  }
+}
+.thumbnail:hover .img-tips {
+  background: url('/images/green.png') !important;
+
+  p {
+    display: block;
+  }
+}
+.caption {
+  padding: 0 20px 10px 20px !important;
+}
+/**
+ * course
+ */
+.caption {
+  h4 {
+    color: #34b26b;
+  }
+}
+.bottom-tips {
+  width: 100%;
+  height: 4.4rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  p {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 37px;
+    line-height: 37px;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+    text-indent: 1em;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/**
+ * consultation
+ */
+.consultation {
+  height: 200px;
+}
+.con {
+  border: 1px solid #eeeeee;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.consultation-text {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 20px;
+  height: 200px;
+}
+.consultation-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+
+  a {
+    width: 205px;
+    border: 1px solid #32b16c;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 4px;
+    font-size: 28px;
+    color: #32b16c;
+  }
+}
+.col-md-12, .consultation, .consultation-desc {
+  padding: 0 !important;
+}
+.col-md-12 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/**
+ * new
+ */
+@media (min-width: 992px){
+  .new-img {
+    width: 224px;
+    height: 150px;
+  }
+}
+.new-desc {
+  width: 321px;
+}
+/**
+ * careers
+ */
+.title {
+  font-size: 14px;
+  text-align: center;
+}
+.careers-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.careers-content {
+  width: 8rem;
+  height: 1rem;
+  border: 1px solid #cbcac8;
+  border-radius: 1rem;
+  background-color: #69b61a;
+  color: #fcf8f9;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 15px;
+}
+.panel-careers {
+  background-color: #69b61a !important;
+  color: #fefdf8 !important;
+}
+/**
+ * aboutus
+ */
+.about-desc {
+  color: #ababab;
+  font-size: 12px;
+}
+/**
+ * tiding-show
+ */
+.tiding h4, .tiding p{
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.course h4{
+ text-align: center;
+ margin-bottom: 0.5rem;
+}
+.course p{
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #32b16c;
+}

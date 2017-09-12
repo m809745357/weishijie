@@ -1,53 +1,200 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## 项目概述
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+- 产品名称：「微世界」
+- 项目代码：weishijie
+- 官方地址：http://weishijie.mandokg.com
 
-## About Laravel
+该项目为官网项目
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## 运行环境要求
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Nginx 1.8+
+- PHP 7.0+
+- Mysql 5.7+
+## 开发环境部署/安装
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+本项目代码使用 PHP 框架 [Laravel 5.5](http://laravel-china.org/docs/5.5/) 开发，本地开发环境使用 [Laravel Homestead](http://laravel-china.org/docs/5.5/homestead)。
 
-## Learning Laravel
+### 基础安装
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+#### 1. 克隆源代码
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+克隆 `phphub` 源代码到本地：
 
-## Laravel Sponsors
+    > git clone https://github.com/m809745357/weishijie.git
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+#### 2. 配置本地的 Homestead 环境
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
+1). 运行以下命令编辑 Homestead.yaml 文件：
 
-## Contributing
+```shell
+homestead edit
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+2). 加入对应修改，如下所示：
 
-## Security Vulnerabilities
+```shell
+folders:
+    - map: ~/my-path/weishijie/ # 你本地的项目目录地址
+      to: /home/vagrant/weishijie
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+sites:
+    - map: weishijie.app
+      to: /home/vagrant/weishijie/public
 
-## License
+databases:
+    - weishijie
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+3). 应用修改
+
+修改完成后保存，然后执行以下命令应用配置信息修改：
+
+```shell
+homestead provision
+```
+
+> 注意：有时候你需要重启才能看到应用。运行 `homestead halt` 然后是 `homestead up` 进行重启。
+
+#### 3. 安装扩展包依赖
+
+    > composer install
+
+#### 4. 生成配置文件
+
+```shell
+cp .env.example .env
+```
+
+你可以根据情况修改 `.env` 文件里的内容，如数据库连接、缓存设置等：
+
+```shell
+APP_URL=http://weishijie.app
+...
+DB_HOST=localhost
+DB_DATABASE=weishijie
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
+
+#### 5. 生成数据表及生成测试数据
+
+在 Homestead 的网站根目录下运行以下命令
+
+```shell
+php artisan migrate --seed
+```
+
+#### 6. 创建初始化后台
+
+在 Homestead 的网站根目录下运行以下命令
+
+```shell
+php artisan admin:install
+```
+
+#### 7. 生成秘钥
+
+```shell
+php artisan key:generate
+```
+
+#### 8. 配置 hosts 文件
+
+    echo "192.168.10.10   weishijie.app" | sudo tee -a /etc/hosts
+
+
+### 前端框架安装
+
+1). 安装 node.js
+
+    直接去官网 [https://nodejs.org/en/](https://nodejs.org/en/) 下载安装最新版本。
+
+2). 安装 cnpm 淘宝镜像
+
+```shell
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+
+3). 安装 Laravel Elixir
+
+```shell
+cnpm install
+```
+
+4). 运行所有 Mix 任务
+
+```shell
+cnpm run dev
+```
+
+5). 运行所有 Mix 任务和压缩资源输出
+
+```shell
+cnpm run production
+```
+
+6). 监控资源文件修改
+
+```shell
+cnpm run watch
+// 或
+cnpm run watch-poll
+```
+
+### 链接入口
+
+* 首页地址：http://weishijie.app/
+* 管理后台：http://weishijie.app/admin
+
+管理员账号密码如下:
+
+```
+username: admin
+password: admin
+```
+
+至此, 安装完成 ^_^.
+
+## 服务器架构说明
+
+![file](https://fsdhubcdn.phphub.org/uploads/images/201705/20/1/1G6aQPAZym.png)
+
+> 上图使用工具 [ProcessOn](https://www.processon.com) 绘制。
+
+## 部署须知
+
+我们使用 [Envoy](https://laravel.com/docs/5.0/envoy) 进行代码部署。
+
+### 1. 安装 envoy
+
+```
+composer global require laravel/envoy
+```
+
+> 关于 Envoy 的使用，请查阅 [文档](http://laravel-china.org/docs/5.4/envoy)。
+
+### 2. 命令列表
+
+在你获得服务器访问权限后（请资讯项目负责人），即可在 `本地项目根目录` 执行以下命令进行代码部署：
+
+```
+// 仅更新代码
+envoy run update
+
+// 更新代码, 并执行 migration
+envoy run update-with-migrate
+
+// 更新代码, 并执行 gulp build
+envoy run update-with-gulp
+
+// 更新代码, 并执行 composer
+envoy run update-with-composer-install
+```
+
+## 扩展包使用情况
+
+| 扩展包                                      | 一句话描述                  | 本项目应用场景          |
+| ---------------------------------------- | ---------------------- | ---------------- |
+| [orangehill/iseed](https://github.com/orangehill/iseed) | 将数据库数据导出为 Seed 文件      | 导出线上数据，方便于本地开发测试 |
+| [predis/predis](https://github.com/nrk/predis.git) | Redis 官方首推的 PHP 客户端开发包 | 缓存驱动 Redis 基础扩展包 |

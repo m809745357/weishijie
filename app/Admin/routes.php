@@ -11,5 +11,12 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
-
+    $router->resource('companies', 'CompanyController');
+    $router->resource('tidings', 'TidingController');
+    $router->resource('teachers', 'TeacherController');
+    $router->resource('courses', 'CourseController');
+    $router->resource('curricula', 'CurriculumController');
+    $router->resource('careers', 'CareerController');
+    $router->resource('aboutus', 'AboutController');
+    $router->resource('histories', 'HistoryController');
 });

@@ -2,6 +2,8 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\About;
+
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
@@ -9,7 +11,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 
-class ExampleController extends Controller
+class AboutController extends Controller
 {
     use ModelForm;
 
@@ -22,8 +24,8 @@ class ExampleController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('关于我们');
+            $content->description('展示关于我们分类信息');
 
             $content->body($this->grid());
         });
@@ -39,8 +41,8 @@ class ExampleController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('关于我们');
+            $content->description('展示关于我们分类信息');
 
             $content->body($this->form()->edit($id));
         });
@@ -55,8 +57,8 @@ class ExampleController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('关于我们');
+            $content->description('展示关于我们分类信息');
 
             $content->body($this->form());
         });
@@ -69,12 +71,22 @@ class ExampleController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(YourModel::class, function (Grid $grid) {
+        return Admin::grid(About::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
 
-            $grid->created_at();
-            $grid->updated_at();
+            $grid->title('标题');
+
+            $grid->image('图片')->display(function ($image) {
+                return "<img src=\"{$image}\" width=\"64\" height=\"48\">";
+            });
+
+            $grid->desc('描述')->display(function ($desc) {
+                return strlen($desc) < 100 ?: substr($desc, 0, 100) . ' ...';
+            });
+
+            $grid->created_at('创建时间');
+            $grid->updated_at('更新时间');
         });
     }
 
@@ -85,12 +97,18 @@ class ExampleController extends Controller
      */
     protected function form()
     {
-        return Admin::form(YourModel::class, function (Form $form) {
+        return Admin::form(About::class, function (Form $form) {
 
             $form->display('id', 'ID');
 
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+            $form->text('title', '标题');
+
+            $form->image('image', '图片');
+
+            $form->textarea('desc', '描述');
+
+            $form->display('created_at', '创建时间');
+            $form->display('updated_at', '更新时间');
         });
     }
 }

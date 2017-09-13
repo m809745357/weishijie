@@ -18,7 +18,7 @@ class CreateTeachersTable extends Migration
             $table->string('name')->default('');
             $table->string('image')->nullable();
             $table->string('desc')->default('');
-            $table->string('content')->default('');
+            $table->text('content')->default('');
             $table->timestamps();
         });
     }

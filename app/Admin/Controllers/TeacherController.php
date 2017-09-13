@@ -104,9 +104,9 @@ class TeacherController extends Controller
 
             $form->image('image', '图片');
 
-            $form->textarea('desc', '描述');
+            $form->text('desc', '描述');
 
-            $form->editor('content', '内容');
+            $form->textarea('content', '内容');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

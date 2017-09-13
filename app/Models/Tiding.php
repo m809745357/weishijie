@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Tiding extends Model
+class Tiding extends BaseModel
 {
     public function path()
     {

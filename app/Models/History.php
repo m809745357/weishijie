@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class History extends Model
+class History extends BaseModel
 {
     //
 }

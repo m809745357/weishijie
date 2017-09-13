@@ -9,8 +9,10 @@
       <p>{{ $tiding->created_at }}</p>
       <hr>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 new">
       <img src="{{ $tiding->image }}" alt="" width="100%">
+    </div>
+    <div class="col-md-12">
       <p>{{ $tiding->desc }}</p>
     </div>
     <div class="col-md-12" style="margin-bottom: 0.5rem;">

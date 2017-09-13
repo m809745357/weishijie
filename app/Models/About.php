@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class About extends Model
+class About extends BaseModel
 {
     //
 }

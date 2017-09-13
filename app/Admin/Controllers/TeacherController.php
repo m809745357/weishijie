@@ -81,7 +81,7 @@ class TeacherController extends Controller
             });
 
             $grid->desc('描述')->display(function ($desc) {
-                return strlen($desc) < 100 ?: substr($desc, 0, 100) . ' ...';
+                return strlen($desc) < 100 ? $desc : substr($desc, 0, 100) . ' ...';
             });
 
             $grid->created_at('创建时间');

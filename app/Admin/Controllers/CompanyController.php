@@ -84,7 +84,7 @@ class CompanyController extends Controller
             });
 
             $grid->content('介绍文字')->display(function ($content) {
-                return strlen($content) < 10 ?: substr($content, 0, 10) . ' ...';
+                return strlen($content) < 10 ? $content : substr($content, 0, 10) . ' ...';
             });
 
             $grid->logo('Logo')->display(function ($logo) {

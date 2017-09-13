@@ -30,7 +30,7 @@
             </div>
             <div id="collapse{{ $career->id }}" class="panel-collapse collapse {{ $career->id === 1 ? 'in' : '' }}" role="tabpanel" aria-labelledby="heading{{ $career->id }}">
               <div class="panel-body">
-                {{ $career->body }}
+                {!! $career->body !!}
               </div>
             </div>
           </div>

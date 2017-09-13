@@ -16,7 +16,7 @@
         <p>{{ $company->desc }}</p>
       </div>
       <div class="col-md-12 new">
-        {{ $company->body }}
+        {!! $company->body !!}
       </div>
   </div>
 </div>

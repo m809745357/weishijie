@@ -16,7 +16,7 @@
       <p>{{ $tiding->desc }}</p>
     </div>
     <div class="col-md-12" style="margin-bottom: 0.5rem;">
-      {{ $tiding->content }}
+      {!! $tiding->content !!}
     </div>
   </div>
 </div>

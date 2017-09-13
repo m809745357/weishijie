@@ -14,8 +14,8 @@
       <p>{{ $course->desc }}</p>
     </div>
     <div class="col-md-12" style="margin-bottom: 0.5rem;">
-      {{ $course->content }}
+      {!! $course->content !!}
     </div>
-  </div>  
+  </div>
 </div>
 @endsection

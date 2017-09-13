@@ -158,11 +158,11 @@ class CompanyController extends Controller
 
             $form->file('video', '案例文件');
 
-            $form->text('title', '案例文件');
+            $form->text('title', '案例标题');
 
-            $form->textarea('desc', '案例文件');
+            $form->textarea('desc', '案例描述');
 
-            $form->editor('body', '案例文件');
+            $form->editor('body', '案例内容');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

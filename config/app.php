@@ -168,7 +168,7 @@ return [
          * Package Service Providers...
          */
         Orangehill\Iseed\IseedServiceProvider::class,
-        
+        Backup\BackupServiceProvider::class,
         /*
          * Application Service Providers...
          */

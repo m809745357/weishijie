@@ -95,7 +95,7 @@ class CurriculumController extends Controller
 
             $form->display('id', 'ID');
 
-            $form->select('teacher_id', '课程信息')->options(\App\Models\Course::all()->pluck('title', 'id'));
+            $form->select('course_id', '课程信息')->options(\App\Models\Course::all()->pluck('title', 'id'));
 
             $form->datetime('started_at', '开课时间')->format('YYYY-MM-DD HH:mm:ss');
 

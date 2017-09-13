@@ -19,11 +19,6 @@
         </div>
       </div>
     @endforeach
-      <div class="col-md-12 loading">
-          <div class="loading-more">
-              <span>加载更多</span>
-          </div>
-      </div>
   </div>
 </div>
 @endsection

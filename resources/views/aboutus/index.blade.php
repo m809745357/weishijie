@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="other-tips">
-  <p>关于我们没有资料</p>
+  <p>关于我们</p>
   <span>aboutus</span>
 </div>
 <div class="container">

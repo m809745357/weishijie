@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ $company->logo }}" width="55">
+                        <img src="{{ $company->logo }}" width="50">
                         <p>
                           <span>{{ config('app.name') }}</span>
                           <span>新零售商学院</span>

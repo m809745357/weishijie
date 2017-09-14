@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="/images/consultation.png" width="100%" class="other-tips">
+<div class="other-tips">
+  <p>开课咨询</p>
+  <span>curricula</span>
+</div>
 <div class="container">
   <div class="row">
     @foreach ($curricula as $curriculum)

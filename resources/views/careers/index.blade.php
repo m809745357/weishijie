@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="/images/careers.png" width="100%">
+<div class="other-tips">
+  <p>招贤纳士</p>
+  <span>careers</span>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">

@@ -8375,6 +8375,10 @@ button.close {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .navbar-toggle {
@@ -8413,6 +8417,27 @@ body {
 .navbar-brand img {
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.navbar-brand p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 55px;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+  font-size: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navbar {
@@ -8657,6 +8682,37 @@ footer {
 
 .other-tips {
   margin-bottom: 1.722rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 4rem;
+  background-image: url("/images/padding.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.other-tips p {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.other-tips span {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
 }
 
 .loading {

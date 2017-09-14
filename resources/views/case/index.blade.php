@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="/images/case.png" width="100%" class="other-tips">
+<div class="other-tips">
+  <p>案例见证</p>
+  <span>cases</span>
+</div>
 <div class="container">
   <div class="row">
       <div class="col-md-12 new">

@@ -30,6 +30,7 @@
     height: 85px;
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
 
   .navbar-toggle {
@@ -63,6 +64,18 @@ body {
   img {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
   }
 }
 .navbar {
@@ -233,6 +246,28 @@ footer {
 }
 .other-tips {
   margin-bottom: 1.722rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 4rem;
+  background-image: url('/images/padding.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  p {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+
+  span {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 300;
+  }
 }
 .loading {
   display: flex;

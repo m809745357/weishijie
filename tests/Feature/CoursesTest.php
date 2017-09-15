@@ -15,6 +15,8 @@ class CoursesTest extends TestCase
     {
         $course = factory('App\Models\Course')->create();
 
+        $company = factory('App\Models\Company')->create();
+
         $response = $this->get('/courses');
 
         $response->assertSee($course->title);
@@ -24,6 +26,8 @@ class CoursesTest extends TestCase
     public function a_user_can_read_a_single_course()
     {
         $course = factory('App\Models\Course')->create();
+
+        $company = factory('App\Models\Company')->create();
 
         $response = $this->get('/courses/' . $course->id);
 

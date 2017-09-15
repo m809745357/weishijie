@@ -15,6 +15,8 @@ class CareersTest extends TestCase
     {
         $career = factory('App\Models\Career')->create();
 
+        $company = factory('App\Models\Company')->create();
+
         $response = $this->get('/careers');
 
         $response->assertSee($career->title);

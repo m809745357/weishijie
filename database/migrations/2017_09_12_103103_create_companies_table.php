@@ -25,10 +25,6 @@ class CreateCompaniesTable extends Migration
             $table->string('url')->default('');
             $table->string('mobile')->default('');
             $table->string('ewm');
-            $table->string('video')->nullable();
-            $table->string('title')->default('');
-            $table->string('desc')->default('');
-            $table->text('body');
             $table->timestamps();
         });
     }

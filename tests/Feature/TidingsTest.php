@@ -15,6 +15,8 @@ class TidingsTest extends TestCase
     {
         $tiding = factory('App\Models\Tiding')->create();
 
+        $company = factory('App\Models\Company')->create();
+
         $response = $this->get('/tidings');
 
         $response->assertSee($tiding->title);
@@ -24,6 +26,8 @@ class TidingsTest extends TestCase
     public function a_user_can_read_a_single_tiding()
     {
         $tiding = factory('App\Models\Tiding')->create();
+
+        $company = factory('App\Models\Company')->create();
 
         $response = $this->get('/tidings/' . $tiding->id);
 

@@ -15,6 +15,8 @@ class CurriculaTest extends TestCase
     {
         $curricula = factory('App\Models\Curriculum')->create();
 
+        $company = factory('App\Models\Company')->create();
+
         $response = $this->get('/curricula');
 
         $response->assertSee($curricula->course->title);

@@ -16,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (config('app.env') !== 'testing') {
-            //Config::load();
-        }
+        // if (config('app.env') !== 'testing') {
+        //     //Config::load();
+        // }
 
         // 使用基于闭包的合成器...
         View::composer(['layouts.app', 'case.index', 'welcome'], function ($view) {

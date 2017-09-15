@@ -89,11 +89,7 @@ $factory->define(App\Models\Company::class, function (Faker $faker) {
         'email' => $faker->companyEmail,
         'url' => $faker->url,
         'mobile' =>'15757100085',
-        'ewm' => $faker->imageUrl(108, 108),
-        'video' => $faker->imageUrl,
-        'title' => $faker->sentence,
-        'desc' => $faker->paragraph,
-        'body' => $faker->paragraph
+        'ewm' => $faker->imageUrl(108, 108)
     ];
 });
 
@@ -102,5 +98,15 @@ $factory->define(App\Models\History::class, function (Faker $faker) {
         'year' => $faker->year,
         'title' => $faker->sentence,
         'desc' => $faker->paragraph
+    ];
+});
+
+$factory->define(App\Models\Witness::class, function (Faker $faker) {
+    return [
+        'image' => $faker->imageUrl,
+        'title' => $faker->sentence,
+        'video' => $faker->imageUrl,
+        'desc' => $faker->paragraph,
+        'body' => $faker->paragraph
     ];
 });

@@ -45,7 +45,7 @@
                         <li><a href="{{ route('teachers') }}">师资力量</a></li>
                         <li><a href="{{ route('courses') }}">课程介绍</a></li>
                         <li><a href="{{ route('curricula') }}">开课咨询</a></li>
-                        <li><a href="{{ route('case') }}">案例见证</a></li>
+                        <li><a href="{{ route('witnesses') }}">案例见证</a></li>
                         <li><a href="{{ route('careers') }}">招贤纳士</a></li>
                         <li><a href="{{ route('aboutus') }}">关于我们</a></li>
                     </ul>

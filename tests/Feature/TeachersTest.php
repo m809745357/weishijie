@@ -14,6 +14,8 @@ class TeachersTest extends TestCase
     public function a_user_can_view_all_teachers()
     {
         $tiding = factory('App\Models\Teacher')->create();
+        
+        $company = factory('App\Models\Company')->create();
 
         $response = $this->get('/teachers');
 

@@ -14,6 +14,8 @@ class AboutsTest extends TestCase
     public function a_user_can_view_all_abouts()
     {
         $about = factory('App\Models\About')->create();
+        
+        $company = factory('App\Models\Company')->create();
 
         $response = $this->get('/aboutus');
 

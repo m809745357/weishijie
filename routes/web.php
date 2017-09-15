@@ -23,7 +23,9 @@ Route::get('/courses/{course}', 'CourseController@show')->name('course');
 
 Route::get('/curricula', 'CurriculumController@index')->name('curricula');
 
-Route::get('/case', 'CaseController@index')->name('case');
+Route::get('/witnesses', 'WitnessController@index')->name('witnesses');
+
+Route::get('/witnesses/{witness}', 'WitnessController@show')->name('witness');
 
 Route::get('/careers', 'CareerController@index')->name('careers');
 

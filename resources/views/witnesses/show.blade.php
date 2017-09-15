@@ -10,16 +10,19 @@
       <div class="col-md-12 new">
         <!-- 16:9 aspect ratio -->
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="{{ $company->video }}" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" src="{{ $witness->video }}" allowfullscreen></iframe>
         </div>
       </div>
       <div class="col-md-12 new">
-        <h4>{{ $company->title }}</h4>
-        <hr>
-        <p>{{ $company->desc }}</p>
+        <img src="{{ $witness->image }}" width="100%">
       </div>
       <div class="col-md-12 new">
-        {!! $company->body !!}
+        <h4>{{ $witness->title }}</h4>
+        <hr>
+        <p>{{ $witness->desc }}</p>
+      </div>
+      <div class="col-md-12 new">
+        {!! $witness->body !!}
       </div>
   </div>
 </div>

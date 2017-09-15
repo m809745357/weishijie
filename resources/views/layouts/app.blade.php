@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="/">首页</a></li>
+                        <li><a href="/">公司首页</a></li>
                         <li><a href="{{ route('tidings') }}">公司时事</a></li>
                         <li><a href="{{ route('teachers') }}">师资力量</a></li>
                         <li><a href="{{ route('courses') }}">课程介绍</a></li>
@@ -105,7 +105,7 @@
           </div>
         </div>
         <footer>
-          Copyright (c) 2017 huishuoit.com 浙 ICP 备 15019987 号
+          Copyright (c) 2017 wsjsxy.com 浙 ICP 备 15019987 号
         </footer>
     </div>
 

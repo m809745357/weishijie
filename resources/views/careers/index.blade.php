@@ -25,11 +25,11 @@
         @foreach ($careers as $career)
           <div class="panel panel-success">
             <div class="panel-heading panel-careers" role="tab" id="heading{{ $career->id }}">
-              <h4 class="panel-title">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $career->id }}" aria-expanded="true" aria-controls="collapseOne">
+              <h4 class="panel-title" style="color: #fff;">
                   {{ $career->title }}
-                </a>
               </h4>
+                </a>
             </div>
             <div id="collapse{{ $career->id }}" class="panel-collapse collapse {{ $career->id === 1 ? 'in' : '' }}" role="tabpanel" aria-labelledby="heading{{ $career->id }}">
               <div class="panel-body">

@@ -12,6 +12,9 @@
     // padding-top: 31.5px;
     // padding-bottom: 31.5px;
   }
+  .navbar-nav > li > a:hover {
+  	background-color: #69b61a !important;
+  }
   .navbar-left {
     height: 100vh;
     width: 85px;
@@ -188,7 +191,7 @@ body {
   height: 5.20rem;
 
   p {
-    width: 2rem;
+    width: 3em;
     text-align: center;
     font-size: 17px;
   }
@@ -290,7 +293,7 @@ footer {
 }
 .img-tips {
   width: 100%;
-  height: 238px;
+  height: 480px;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -304,6 +307,13 @@ footer {
   }
 }
 .thumbnail:hover .img-tips {
+  background: url('/images/green.png') !important;
+
+  p {
+    display: block;
+  }
+}
+.thumbnail:active .img-tips {
   background: url('/images/green.png') !important;
 
   p {

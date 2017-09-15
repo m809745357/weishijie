@@ -2,7 +2,6 @@
 
 @section('content')
 <img src="{{ $company->banner }}" width="100%" class="img-top">
-<img src="/images/middle.png" width="100%">
 <div class="container">
     <div class="row">
         <div class="col-md-12">

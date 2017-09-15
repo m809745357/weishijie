@@ -12,12 +12,12 @@ class AdminMenuTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('admin_menu')->delete();
-        
+
         \DB::table('admin_menu')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'parent_id' => 0,
@@ -28,7 +28,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:36',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'parent_id' => 0,
@@ -39,7 +39,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'parent_id' => 2,
@@ -50,7 +50,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'parent_id' => 2,
@@ -61,7 +61,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'parent_id' => 2,
@@ -72,7 +72,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'parent_id' => 2,
@@ -83,7 +83,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'parent_id' => 2,
@@ -94,7 +94,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'parent_id' => 0,
@@ -105,7 +105,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 15:32:24',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'parent_id' => 0,
@@ -116,7 +116,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 15:46:06',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'parent_id' => 0,
@@ -127,7 +127,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 15:56:34',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'parent_id' => 0,
@@ -138,7 +138,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 16:09:29',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'parent_id' => 0,
@@ -149,7 +149,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 16:38:36',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'parent_id' => 0,
@@ -160,7 +160,7 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 16:45:00',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'parent_id' => 0,
@@ -171,8 +171,17 @@ class AdminMenuTableSeeder extends Seeder
                 'created_at' => '2017-09-12 16:48:29',
                 'updated_at' => '2017-09-12 16:54:57',
             ),
+            14 =>
+            array (
+                'id' => 15,
+                'parent_id' => 0,
+                'order' => 6,
+                'title' => '案例见证',
+                'icon' => 'fa-thumbs-o-up',
+                'uri' => 'witnesses',
+                'created_at' => '2017-09-12 16:48:29',
+                'updated_at' => '2017-09-12 16:54:57',
+            ),
         ));
-        
-        
     }
 }

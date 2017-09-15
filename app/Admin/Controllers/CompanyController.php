@@ -108,18 +108,6 @@ class CompanyController extends Controller
             $grid->ewm('二维码')->display(function ($ewm) {
                 return "<img src=\"{$ewm}\" width=\"108\" height=\"108\">";
             });
-            $grid->video('案例文件');
-
-            $grid->title('案例标题')->display(function ($title) {
-                return strlen($title) > 10 ? substr($title, 0, 10) . ' ...' : $title;
-            });
-            $grid->desc('案例描述')->display(function ($desc) {
-                return strlen($desc) > 10 ? substr($desc, 0, 10) . ' ...' : $desc;
-            });
-            $grid->body('案例内容')->display(function ($body) {
-                return strlen($body) > 10 ? substr($body, 0, 10) . ' ...' : $body;
-            });
-
             // $grid->created_at();
             // $grid->updated_at();
         });
@@ -155,14 +143,6 @@ class CompanyController extends Controller
             $form->mobile('mobile', '手机号码')->options(['mask' => '999 9999 9999']);
 
             $form->image('ewm', '二维码');
-
-            $form->file('video', '案例文件');
-
-            $form->text('title', '案例标题');
-
-            $form->textarea('desc', '案例描述');
-
-            $form->editor('body', '案例内容');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

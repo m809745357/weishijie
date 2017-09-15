@@ -19,4 +19,5 @@ Route::group([
     $router->resource('careers', 'CareerController');
     $router->resource('aboutus', 'AboutController');
     $router->resource('histories', 'HistoryController');
+    $router->resource('witnesses', 'WitnessController');
 });

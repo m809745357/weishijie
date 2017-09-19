@@ -212,11 +212,12 @@ body {
 
   p {
     width: 5rem;
-    white-space:nowrap;
+    //white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
     text-align: left;
     margin: 0 0 0.1rem;
+    justify-content: center;
   }
 }
 footer {

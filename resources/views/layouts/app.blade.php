@@ -31,7 +31,7 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ $company->logo }}" width="50">
                         <p>
-                          <span>{{ config('app.name') }}</span>
+                          <span>微世界</span>
                           <span>新零售商学院</span>
                         </p>
                     </a>
@@ -105,7 +105,7 @@
           </div>
         </div>
         <footer>
-          Copyright (c) 2017 wsjsxy.com 浙 ICP 备 15019987 号
+          Copyright &copy; 2017 wsjsxy.com 浙 ICP 备 15019987 号
         </footer>
     </div>
 

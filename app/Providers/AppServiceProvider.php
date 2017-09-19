@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
         // }
 
         // 使用基于闭包的合成器...
-        View::composer(['layouts.app', 'case.index', 'welcome'], function ($view) {
+        View::composer(['layouts.app', 'case.index', 'welcome', 'careers.index'], function ($view) {
             $view->with('company', Company::find(1));
         });
     }

@@ -44,9 +44,10 @@ $factory->define(App\Models\Teacher::class, function (Faker $faker) {
 
 $factory->define(App\Models\Course::class, function (Faker $faker) {
     return [
-        'teacher_id' => function () {
-            return factory('App\Models\Teacher')->create()->id;
-        },
+        // 'teacher_id' => function () {
+        //     return factory('App\Models\Teacher')->create()->id;
+        // },
+        'teacher' => $faker->name,
         'title' => $faker->sentence,
         'image' => $faker->imageUrl,
         'desc' => $faker->paragraph,

@@ -8,9 +8,4 @@ class Course extends BaseModel
     {
         return '/courses/' . $this->id;
     }
-
-    public function teacher()
-    {
-        return $this->belongsTo(\App\Models\Teacher::class, 'teacher_id');
-    }
 }

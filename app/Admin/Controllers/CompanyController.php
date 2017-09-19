@@ -108,6 +108,10 @@ class CompanyController extends Controller
             $grid->ewm('二维码')->display(function ($ewm) {
                 return "<img src=\"{$ewm}\" width=\"108\" height=\"108\">";
             });
+
+            $grid->careers('招聘文字')->display(function ($carrers) {
+                return strlen($carrers) > 10 ? substr($carrers, 0, 10) . ' ...' : $carrers;
+            });
             // $grid->created_at();
             // $grid->updated_at();
         });
@@ -143,6 +147,8 @@ class CompanyController extends Controller
             $form->mobile('mobile', '手机号码')->options(['mask' => '999 9999 9999']);
 
             $form->image('ewm', '二维码');
+
+            $form->textarea('careers', '招聘文字');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

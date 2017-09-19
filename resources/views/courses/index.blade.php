@@ -16,7 +16,7 @@
             </div>
           </a>
           <div class="caption">
-            <h4>讲师：{{ $course->teacher->name }}</h4>
+            <h4>讲师：{{ $course->teacher }}</h4>
             <p>{{ strlen( $course->desc ) > 150 ? substr($course->desc, 0, 150) . ' ...' : $course->desc }}</p>
           </div>
         </div>

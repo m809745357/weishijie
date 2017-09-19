@@ -454,6 +454,22 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
+.tiding-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 160px;
+}
+
+.tiding-detail {
+  font-size: 16px;
+  padding: 8px 28px;
+  border-radius: 2px;
+  color: #69b433;
+  border: 1px solid #69b433;
+  width: 122px;
+}
+
 .course h4{
  text-align: center;
  margin-bottom: 0.5rem;

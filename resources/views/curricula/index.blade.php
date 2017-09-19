@@ -16,7 +16,7 @@
 
           <div class="consultation-text">
             <h3 style="color: #333333">{{ $curriculum->course->title }}</h3>
-            <h4 style="color: #31b069">讲师：{{ $curriculum->course->teacher->name }}</h4>
+            <h4 style="color: #31b069">讲师：{{ $curriculum->course->teacher }}</h4>
             <h4 style="color: #aaaaaa">开课时间：{{ $curriculum->started_at }}</h4>
           </div>
         </div>

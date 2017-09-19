@@ -75,7 +75,8 @@ class CourseController extends Controller
 
             $grid->id('ID')->sortable();
 
-            $grid->column('teacher.name', '讲师');
+            // $grid->column('teacher.name', '讲师');
+            $grid->teacher('讲师');
 
             $grid->title('标题');
 
@@ -103,7 +104,8 @@ class CourseController extends Controller
 
             $form->display('id', 'ID');
 
-            $form->select('teacher_id', '讲师')->options(\App\Models\Teacher::all()->pluck('name', 'id'));
+            // $form->select('teacher_id', '讲师')->options(\App\Models\Teacher::all()->pluck('name', 'id'));
+            $form->text('teacher', '讲师');
 
             $form->text('title', '标题');
 

@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-md-12 course">
       <h4>{{ $course->title }}</h4>
-      <p>讲师：{{ $course->teacher->name }}</p>
+      <p>讲师：{{ $course->teacher }}</p>
       <hr>
     </div>
     <div class="col-md-12">

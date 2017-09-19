@@ -25,6 +25,7 @@ class CreateCompaniesTable extends Migration
             $table->string('url')->default('');
             $table->string('mobile')->default('');
             $table->string('ewm');
+            $table->string('careers')->default('');
             $table->timestamps();
         });
     }

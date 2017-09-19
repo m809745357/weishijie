@@ -9,7 +9,7 @@ class CurriculumController extends Controller
 {
     public function index()
     {
-        $curricula = Curriculum::with('course', 'course.teacher')->latest()->get();
+        $curricula = Curriculum::with('course')->latest()->get();
         return view('curricula.index', compact('curricula'));
     }
 }

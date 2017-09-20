@@ -132,7 +132,7 @@ class CompanyController extends Controller
 
             $form->image('image', '公司介绍图');
 
-            $form->textarea('content', '公司介绍文字');
+            $form->editor('content', '公司介绍文字');
 
             $form->image('logo', 'Logo');
 

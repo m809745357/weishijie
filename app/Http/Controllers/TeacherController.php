@@ -9,7 +9,7 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        $teachers = Teacher::latest()->get();
+        $teachers = Teacher::orderBy('order', 'desc')->get();
         return view('teachers.index', compact('teachers'));
     }
 

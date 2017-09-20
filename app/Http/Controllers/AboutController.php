@@ -9,7 +9,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $abouts = About::latest()->get();
+        $abouts = About::orderBy('order', 'desc')->get();
         return view('aboutus.index', compact('abouts'));
     }
 }

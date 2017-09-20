@@ -22,6 +22,7 @@ Route::get('/courses', 'CourseController@index')->name('courses');
 Route::get('/courses/{course}', 'CourseController@show')->name('course');
 
 Route::get('/curricula', 'CurriculumController@index')->name('curricula');
+Route::get('/curricula/{curriculum}', 'CurriculumController@show')->name('curriculum');
 
 Route::get('/witnesses', 'WitnessController@index')->name('witnesses');
 

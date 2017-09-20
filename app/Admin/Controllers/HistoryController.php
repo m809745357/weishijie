@@ -83,6 +83,8 @@ class HistoryController extends Controller
                 return strlen($desc) < 100 ? $desc : substr($desc, 0, 100) . ' ...';
             });
 
+            $grid->order('排序')->editable('text');
+
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
         });
@@ -104,6 +106,8 @@ class HistoryController extends Controller
             $form->text('title', '标题');
 
             $form->textarea('desc', '描述');
+
+            $form->number('order', '排序');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

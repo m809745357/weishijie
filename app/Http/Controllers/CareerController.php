@@ -9,7 +9,7 @@ class CareerController extends Controller
 {
     public function index()
     {
-        $careers = Career::latest()->get();
+        $careers = Career::orderBy('order', 'desc')->get();
         return view('careers.index', compact('careers'));
     }
 }

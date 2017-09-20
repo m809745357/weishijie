@@ -75,9 +75,22 @@ class CurriculumController extends Controller
 
             $grid->id('ID')->sortable();
 
-            $grid->column('course.title', '课程名称');
+            // $grid->column('course.title', '课程名称');
+            $grid->teacher('讲师');
+
+            $grid->title('标题');
+
+            $grid->image('图片')->display(function ($image) {
+                return "<img src=\"{$image}\" width=\"64\" height=\"48\">";
+            });
+
+            $grid->desc('描述')->display(function ($desc) {
+                return strlen($desc) < 100 ? $desc : substr($desc, 0, 100) . ' ...';
+            });
 
             $grid->started_at('开课时间')->editable('datetime');
+
+            $grid->order('排序')->editable('text');
 
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
@@ -95,9 +108,20 @@ class CurriculumController extends Controller
 
             $form->display('id', 'ID');
 
-            $form->select('course_id', '课程信息')->options(\App\Models\Course::all()->pluck('title', 'id'));
+            // $form->select('course_id', '课程信息')->options(\App\Models\Course::all()->pluck('title', 'id'));
+            $form->text('teacher', '讲师');
+
+            $form->text('title', '标题');
+
+            $form->image('image', '图片');
+
+            $form->textarea('desc', '描述');
+
+            $form->editor('content', '内容');
 
             $form->datetime('started_at', '开课时间')->format('YYYY-MM-DD HH:mm:ss');
+
+            $form->number('order', '排序');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

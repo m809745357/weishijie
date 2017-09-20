@@ -29,7 +29,8 @@ $factory->define(App\Models\Tiding::class, function (Faker $faker) {
         'title' => $faker->sentence,
         'image' => $faker->imageUrl,
         'desc' => $faker->paragraph,
-        'content' => $faker->text
+        'content' => $faker->text,
+        'order' => 0,
     ];
 });
 
@@ -38,7 +39,8 @@ $factory->define(App\Models\Teacher::class, function (Faker $faker) {
         'name' => $faker->name,
         'image' => $faker->imageUrl,
         'desc' => $faker->paragraph,
-        'content' => $faker->text
+        'content' => $faker->text,
+        'order' => 0,
     ];
 });
 
@@ -51,23 +53,31 @@ $factory->define(App\Models\Course::class, function (Faker $faker) {
         'title' => $faker->sentence,
         'image' => $faker->imageUrl,
         'desc' => $faker->paragraph,
-        'content' => $faker->text
+        'content' => $faker->text,
+        'order' => 0,
     ];
 });
 
 $factory->define(App\Models\Curriculum::class, function (Faker $faker) {
     return [
-        'course_id' => function () {
-            return factory('App\Models\Course')->create()->id;
-        },
-        'started_at' => $faker->dateTime()
+        // 'course_id' => function () {
+        //     return factory('App\Models\Course')->create()->id;
+        // },
+        'teacher' => $faker->name,
+        'title' => $faker->sentence,
+        'image' => $faker->imageUrl,
+        'desc' => $faker->paragraph,
+        'content' => $faker->text,
+        'started_at' => $faker->dateTime(),
+        'order' => 0,
     ];
 });
 
 $factory->define(App\Models\Career::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
-        'body' => $faker->paragraph
+        'body' => $faker->paragraph,
+        'order' => 0,
     ];
 });
 
@@ -75,7 +85,8 @@ $factory->define(App\Models\About::class, function (Faker $faker) {
     return [
         'image' => $faker->imageUrl,
         'title' => $faker->sentence,
-        'desc' => $faker->paragraph
+        'desc' => $faker->paragraph,
+        'order' => 0,
     ];
 });
 
@@ -98,7 +109,8 @@ $factory->define(App\Models\History::class, function (Faker $faker) {
     return [
         'year' => $faker->year,
         'title' => $faker->sentence,
-        'desc' => $faker->paragraph
+        'desc' => $faker->paragraph,
+        'order' => 0,
     ];
 });
 
@@ -108,6 +120,7 @@ $factory->define(App\Models\Witness::class, function (Faker $faker) {
         'title' => $faker->sentence,
         'video' => $faker->imageUrl,
         'desc' => $faker->paragraph,
-        'body' => $faker->paragraph
+        'body' => $faker->paragraph,
+        'order' => 0,
     ];
 });

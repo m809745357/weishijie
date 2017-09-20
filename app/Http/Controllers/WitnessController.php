@@ -9,7 +9,7 @@ class WitnessController extends Controller
 {
     public function index()
     {
-        $witnesses = Witness::latest()->get();
+        $witnesses = Witness::orderBy('order', 'desc')->get();
         return view('witnesses.index', compact('witnesses'));
     }
 

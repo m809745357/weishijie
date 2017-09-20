@@ -84,6 +84,8 @@ class TeacherController extends Controller
                 return strlen($desc) < 100 ? $desc : substr($desc, 0, 100) . ' ...';
             });
 
+            $grid->order('排序')->editable('text');
+
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
         });
@@ -107,6 +109,8 @@ class TeacherController extends Controller
             $form->text('desc', '描述');
 
             $form->textarea('content', '内容');
+
+            $form->number('order', '排序');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

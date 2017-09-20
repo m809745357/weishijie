@@ -91,6 +91,8 @@ class WitnessController extends Controller
                 return strlen($body) > 10 ? substr($body, 0, 10) . ' ...' : $body;
             });
 
+            $grid->order('排序')->editable('text');
+
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
         });
@@ -116,6 +118,8 @@ class WitnessController extends Controller
             $form->textarea('desc', '案例描述');
 
             $form->editor('body', '案例内容');
+
+            $form->number('order', '排序');
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '更新时间');

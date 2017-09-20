@@ -9,7 +9,7 @@ class TidingController extends Controller
 {
     public function index()
     {
-        $tidings = Tiding::latest()->get();
+        $tidings = Tiding::orderBy('order', 'desc')->get();
         return view('tidings.index', compact('tidings'));
     }
 

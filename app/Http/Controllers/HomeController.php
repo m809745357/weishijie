@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $hisroies = History::latest('year')->get();
+        $hisroies = History::latest('order', 'desc')->get();
         return view('welcome', compact('hisroies'));
     }
 

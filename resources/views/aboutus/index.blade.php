@@ -15,12 +15,12 @@
           </div>
           <div class="col-md-6">
             <h3>{{ $about->title }}</h3>
-            <p class="about-desc">{{ $about->desc }}</p>
+            <p class="about-desc">{!! $about->desc !!}</p>
           </div>
         @else
           <div class="col-md-6">
             <h3>{{ $about->title }}</h3>
-            <p class="about-desc">{{ $about->desc }}</p>
+            <p class="about-desc">{!! $about->desc !!}</p>
           </div>
           <div class="col-md-6">
             <img src="{{ $about->image }}" width="100%">

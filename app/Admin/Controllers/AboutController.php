@@ -81,10 +81,6 @@ class AboutController extends Controller
                 return "<img src=\"{$image}\" width=\"64\" height=\"48\">";
             });
 
-            $grid->desc('描述')->display(function ($desc) {
-                return strlen($desc) < 100 ? $desc : substr($desc, 0, 100) . ' ...';
-            });
-
             $grid->order('排序')->editable('text');
 
             $grid->created_at('创建时间');
@@ -107,7 +103,7 @@ class AboutController extends Controller
 
             $form->image('image', '图片');
 
-            $form->textarea('desc', '描述');
+            $form->editor('desc', '描述');
 
             $form->number('order', '排序');
 

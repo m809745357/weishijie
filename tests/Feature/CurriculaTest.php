@@ -14,11 +14,11 @@ class CurriculaTest extends TestCase
     public function a_user_can_view_all_curricula()
     {
         $curricula = factory('App\Models\Curriculum')->create();
-// dd($curricula->course->title);
+        
         $company = factory('App\Models\Company')->create();
 
         $response = $this->get('/curricula');
 
-        $response->assertSee($curricula->course->teacher);
+        $response->assertSee($curricula->teacher);
     }
 }

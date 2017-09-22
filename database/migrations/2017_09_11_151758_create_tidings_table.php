@@ -18,6 +18,7 @@ class CreateTidingsTable extends Migration
             $table->string('title')->default('');
             $table->string('image')->nullable();
             $table->string('desc')->default('');
+            $table->integer('order')->default(0);
             $table->text('content');
             $table->timestamps();
         });

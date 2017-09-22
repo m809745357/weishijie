@@ -17,6 +17,7 @@ class CreateAboutsTable extends Migration
             $table->increments('id');
             $table->string('title')->default();
             $table->string('image')->nullable();
+            $table->integer('order')->default(0);
             $table->text('desc');
             $table->timestamps();
         });

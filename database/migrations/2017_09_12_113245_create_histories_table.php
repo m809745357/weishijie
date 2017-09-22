@@ -17,6 +17,7 @@ class CreateHistoriesTable extends Migration
             $table->increments('id');
             $table->string('year')->default('');
             $table->string('title')->default('');
+            $table->integer('order')->default(0);
             $table->text('desc');
             $table->timestamps();
         });

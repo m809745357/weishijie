@@ -19,6 +19,7 @@ class CreateWitnessesTable extends Migration
             $table->string('video')->nullable();
             $table->string('title')->default('');
             $table->string('desc')->default('');
+            $table->integer('order')->default(0);
             $table->text('body');
             $table->timestamps();
         });

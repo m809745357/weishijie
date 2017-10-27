@@ -8,6 +8,13 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @media (min-width: 768px) {
+  .thumbnail:hover .img-tips {
+    background: url('/images/green.png') !important;
+
+    p {
+      display: block;
+    }
+  }
   .navbar-nav > li > a {
     // padding-top: 31.5px;
     // padding-bottom: 31.5px;
@@ -307,20 +314,14 @@ footer {
     display: none;
   }
 }
-.thumbnail:hover .img-tips {
-  background: url('/images/green.png') !important;
 
-  p {
-    display: block;
-  }
-}
-.thumbnail:active .img-tips {
-  background: url('/images/green.png') !important;
-
-  p {
-    display: block;
-  }
-}
+// .thumbnail:active .img-tips {
+//   background: url('/images/green.png') !important;
+//
+//   p {
+//     display: block;
+//   }
+// }
 .caption {
   padding: 0 20px 10px 20px !important;
 }

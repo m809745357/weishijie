@@ -10,7 +10,7 @@
       <div class="col-md-12 new">
         <!-- 16:9 aspect ratio -->
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="{{ $witness->video }}" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" src="/uploads/{{ $witness->video }}" allowfullscreen></iframe>
         </div>
       </div>
       <div class="col-md-12 new">

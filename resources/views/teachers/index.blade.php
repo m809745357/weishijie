@@ -10,7 +10,10 @@
     @foreach ($teachers as $teacher)
       <div class="col-md-4 new">
         <div class="thumbnail">
-          <div class="img-tips" style="background-image: url('{{ $teacher->image }}');">
+          <div class="img-tips"
+              @touchstart="show"
+              @touchend="hide"
+              data-url="{{ $teacher->image }}" style="background-image: url('{{ $teacher->image }}');">
             <p>{{ $teacher->content }}</p>
           </div>
           <div class="caption">

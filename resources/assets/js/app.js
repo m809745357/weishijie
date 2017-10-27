@@ -18,5 +18,15 @@ window.Vue = require('vue');
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    methods: {
+      show(e) {
+        e.target.style.backgroundImage = "url('/images/green.png')";
+        e.target.firstChild.style.display = 'block';
+      },
+      hide(e) {
+        e.target.style.backgroundImage = "url('" + e.target.dataset.url + "')";
+        e.target.firstChild.style.display = 'none';
+      }
+    }
 });
